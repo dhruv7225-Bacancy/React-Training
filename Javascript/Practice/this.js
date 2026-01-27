@@ -49,4 +49,4 @@ const inc = c.increment;
 inc();
 c.log();//1
 
-//check
+//check2
