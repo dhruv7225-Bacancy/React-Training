@@ -70,3 +70,8 @@
 const arr = ['', null, [],undefined, 0 ,{}, 1].filter(Boolean)
 console.log(arr);
 //type coersion
+
+console.log(typeof (null+undefined));
+console.log(typeof (null+"undefined"));
+console.log( {}+[]);
+

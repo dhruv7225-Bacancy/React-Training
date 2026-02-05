@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="submit" id="submit">Submit</button>
+    <button class="submit" id="submit1">Submit</button>
+    <p id="date-time"></p>
+    <script>
+        const btn=document.getElementById("submit")
+        // btn.addEventListener("click",()=>{
+        //     btn.innerText="Submitting"
+        //     btn.setAttribute("disabled",true)
+        //     setTimeout(()=>{
+        //         btn.innerText="Submit"
+        //         btn.removeAttribute("disabled")
+        //     },5000)
+        // })
+
+        const p=document.getElementById("date-time")
+        p.innerText="";
+        const debounce=(func,delay)=>{
+            let inDebouce;
+            return function(){
+                clearTimeout(inDebouce);
+                inDebouce=setTimeout(()=>{
+                    func.apply(this,arguments)
+                },delay)
+            }
+        }
+        btn.addEventListener("click",debounce(()=>{
+            p.innerText=new Date();
+        },3000))
+
+        const btn1= document.getElementById("submit1")
+        btn1.addEventListener("click",throttle(()=>{
+            console.log("hellooooo");
+        },5000))
+
+        function throttle(func,limit){
+            let lastRun;
+            let timeout;
+            return function(){
+                if(lastRun==null){
+                    func.call(this);
+                    lastRun=Date.now();
+                }
+                else{
+                    if(Date.now()-lastRun >=limit){
+                        func.call(this);
+                        lastRun=Date.now();
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
