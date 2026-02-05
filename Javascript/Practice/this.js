@@ -31,22 +31,61 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class Counter {
-  count = 0;
+// class Counter {
+//   count = 0;
 
-  increment = () => {
-    this.count++;
-  };
+//   increment = () => {
+//     this.count++;
+//   };
 
-  log() {
-    console.log(this.count);
-  }
-}
+//   log() {
+//     console.log(this.count);
+//   }
+// }
 
-const c = new Counter();
-const inc = c.increment;
+// const c = new Counter();
+// const inc = c.increment;
 
-inc();
-c.log();//1
+// inc();
+// c.log();//1
 
 //check2
+// console.log(14==014);
+
+
+// let a = 10;
+// x()
+// y()
+// z() 
+
+// function x(){
+//  console.log(this.a)
+// }
+// function y(){
+//   console.log(this.a)
+// }
+// const z = () => {
+//   console.log(this.a)
+// }
+
+// const obj = {
+//   _value: 1,
+//   get value() {
+//     return this._value * 2;
+//   },
+//   set value(val) {
+//     this._value = val + 1;
+//   },
+// };
+
+// obj.value = 5;
+// console.log(obj.value);
+
+const obj = {
+  value: 42,
+  getValue: function () {
+    return this.value;
+  },
+};
+const getValue = obj.getValue;
+console.log(getValue()); // undefined

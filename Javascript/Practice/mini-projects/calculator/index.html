@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        *{
+            margin-bottom:20px ;
+        }
+        .nums{
+            display: flex;
+            width: 200px;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            font-size: larger;
+        }
+        input{
+            width: 300px;
+            height: 50px;
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" name="display" id="display" readonly>
+    <div class="nums">
+        <button class="num" value="1">1</button>
+        <button class="num" value="2">2</button>
+        <button class="num" value="3">3</button>
+        <button class="num" value="4">4</button>
+        <button class="num" value="5">5</button>
+        <button class="num" value="6">6</button>
+        <button class="num" value="7">7</button>
+        <button class="num" value="8">8</button>
+        <button class="num" value="9">9</button>
+    </div>
+    <div class="operations">
+        <button class="op" onclick="appendToDisplay('+')">+</button>
+        <button class="op" onclick="appendToDisplay('-')">-</button>
+        <button class="op" onclick="appendToDisplay('*')">*</button>
+        <button class="op" onclick="appendToDisplay('/')">/</button>
+        <button class="op" onclick="clear1()">clear</button>
+        <button class="op" onclick="eval1()">=</button>
+    </div>
+
+
+    
+</body>
+<script src="script.js"></script>
+</html>
