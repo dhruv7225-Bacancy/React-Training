@@ -56,4 +56,13 @@ const sorted = ans.reduce((sortedArr, obj) => {
 
   return result;
 }, []);
-console.log(sorted);
+console.log(sorted.map((obj)=>{
+    // acc["user"]=obj.user
+    // acc["user"]=obj.user
+    
+    return {
+        user: obj.user,
+        sessionTime: obj.sessionTime,
+        actionsCount: obj.actionsCount
+    }
+}));
