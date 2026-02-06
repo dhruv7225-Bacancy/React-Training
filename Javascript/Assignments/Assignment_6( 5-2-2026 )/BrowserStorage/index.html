@@ -1,0 +1,27 @@
+<!-- Assignment : Browser Storage
+Create a simple HTML page with:
+One input field (name)
+Two buttons: Save and Load
+On Save:
+Store the value in localStorage
+Store the same value in sessionStorage
+On Load:
+Retrieve and display values from both storages -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name"> Name :</label>
+    <input type="text" id="name" class="name" name="name">
+    <p id="loadedText"></p>
+    <Button class="save" onclick="save()">Save</Button>
+    <Button class="load" onclick="load()">Load</Button>
+    <p id="savedText"></p>
+</body>
+<script src="script.js"></script>
+</html>
