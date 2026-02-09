@@ -1,0 +1,32 @@
+<!-- 4) Create a <div> with a black border and white background.
+Define a CSS class .active that changes the background to green and text color to white.
+On click, toggle the .active class using classList.toggle(). -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: white;
+        }
+        .active{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        Lorem ipsum dolor sit amet 
+    </div>
+    <button id="btn">click</button>
+    <script src="script.js"></script>
+</body>
+</html>
