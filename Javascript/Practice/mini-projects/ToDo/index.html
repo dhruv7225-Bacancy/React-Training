@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .list-container ul{
+            width: 800px;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: flex-start;
+            align-items: center;
+            border: 2px solid black;
+        }
+        
+        ul li{
+            /* border: 2px solid black; */
+            width: 300px;
+            height: 50px;
+            padding: auto 0;
+            display: flex;
+            gap: 30px;
+            justify-content:space-around;
+            text-decoration: none;
+            position: relative;
+            list-style-type: none;
+
+        }
+        ul li::before{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 10px;
+            left: 10px;
+            border-radius: 50%;
+            background-image: url("image/unchecked.webp");
+            background-size: cover;
+            background-position: center;
+        }
+        .checked{
+            text-decoration: line-through;
+        }
+        .checked::before{
+            background-image: url("image/checked.webp");
+        }
+        .cross{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: aqua;
+            padding: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <p>To-DO List</p>
+        <div>
+
+            <input type="text" name="todo" id="todo">
+            <button class="add-button" id="add-button">Add</button>
+
+        </div>
+        <div class="list-container" id="list-container">
+            <ul class="lists" id="lists">
+                
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
