@@ -1,6 +1,6 @@
-var prices = [2, 3, 4, 5, 5];
+const prices = [2, 3, 4, 5, 5];
 function calculateTotal(nums) {
-    var sum = 0;
+    let sum = 0;
     nums.forEach(function (x) {
         sum = sum + x;
     });
