@@ -29,8 +29,7 @@ const inventory = [
 //     return quantity>10? "high quatn":"low quant"
 // }));
 
-
-console.log(inventory.reduce((acc,obj)=>{
+const result =inventory.reduce((acc,obj)=>{
     if(obj.quantity>10){
         if(acc["high quant"]){
             acc["high quant"].push(obj)
@@ -48,5 +47,6 @@ console.log(inventory.reduce((acc,obj)=>{
         }
     }
     return acc
-},{}));
+},{})
+console.log(result);
 
