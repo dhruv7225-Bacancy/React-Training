@@ -68,31 +68,3 @@ fastAdd(2, 3); // 5 (cached)
 fastAdd(3, 2); // "calculating", 5
 
 
-
-// const slowAdd=function(args){
-//     console.log("calculating");
-//     return args.reduce((acc,val)=>{
-//         return acc+val
-//     },0)
-// }
-
-// function memoize(){
-//     const map={}
-//     return function(...args){
-//         let key=args.join("-");
-//         if(map[key]){ 
-//             console.log("cached");
-            
-//         }
-//         else{
-//             map[key]=slowAdd.call(this,args)
-//         }
-//         return map[key]
-//     } 
-// }
-
-// const init =memoize()
-// console.log(init(2,3));
-// console.log(init(2,3));
-// console.log(init(4,3));
-// console.log(init(4,3));
