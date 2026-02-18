@@ -23,21 +23,32 @@
 // ```
 
 
-function count(c){
-    let timer;
-    function task(c){
-        console.log(c);
+// function count(c){
+//     let timer;
+//     function task(c){
+//         console.log(c);
         
-        if(c==0){
-            clearTimeout(timer)
-            return;
-        }
-        timer=setTimeout(()=>{
-            count(c-1)
-        },1000)
-    }
-    task(c)
-}
-count(10)
+//         if(c==0){
+//             clearTimeout(timer)
+//             return;
+//         }
+//         timer=setTimeout(()=>{
+//             count(c-1)
+//         },1000)
+//     }
+//     task(c)
+// }
+// count(10)
 
+
+function timer(x){
+    for(let i=x;i>=0;i--){
+        setTimeout(()=>{
+            console.log(i);
+            
+        },1000*(x-i))
+    }
+}
+
+timer(10)
 
