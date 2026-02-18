@@ -1,15 +1,15 @@
 // create a pool of size given and at a time only k process can schedule 
-function Pool(size, k) {
+function Pool(size, maxOp) {
     let poolSize = size
     let curr = 0
-    let maxOp = k
+    
 
     const queue = []
     return async function (pr) {
         // if(queue.length+curr==poolSize){
         //     throw new Error("Pool limit reached")
         // }
-        if (curr == maxOp) {
+        if (curr === maxOp) {
             await new Promise(p => queue.push(p));
         }
         curr++
