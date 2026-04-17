@@ -1,0 +1,35 @@
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.product-card{
+  width: 200px;
+  border: 2px solid black;
+
+}
+
+.page-number{
+  border: 2px solid black;
+  margin: 2px;
+  padding: 2px;
+}
+
+.pageNoPannel{
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pagination-pannel{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.active{
+  background-color: aqua;
+}
